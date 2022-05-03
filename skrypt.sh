@@ -28,3 +28,9 @@ then
 			done
 	fi
 fi
+if [ "$1" == '--help' ]
+then
+	echo "--date      wyświetla aktualną date"
+	echo "--logs      dodaje 100 plików log"
+	echo "--logs x    dodaje x plików log"
+fi
