@@ -30,7 +30,41 @@ then
 fi
 if [ "$1" == '--help' ] || [ "$1" == '-h' ]
 then
-	echo "--date      wyświetla aktualną date"
-	echo "--logs      dodaje 100 plików log"
-	echo "--logs x    dodaje x plików log"
+	echo "--date -d      wyświetla aktualną date"
+	echo "--logs -l     dodaje 100 plików log"
+	echo "--logs x -l x   dodaje x plików log"
+fi
+if [ "$1" == '--init' ]
+then
+	git clone https://github.com/MiloszMro/lab4.git
+fi
+if [ "$1" == '--error' ] || [ "$1" == '-e' ]
+then
+	if [ -n "$2" ]
+	then
+       		for i in $(seq 1 $2);
+			do
+				mkdir error$i
+				cd error$i	
+				touch error$i.txt;
+				echo error$i >> error$i.txt
+				echo $0 >> error$i.txt
+				date >> error$i.txt
+				cd -	
+				
+			done
+	
+
+	else
+       		for i in $(seq 1 100);
+			do
+				mkdir error$i
+				cd error$i	
+				touch error$i.txt;
+				echo error$i >> error$i.txt
+				echo $0 >> error$i.txt
+				date >> error$i.txt
+				cd -	
+			done
+	fi
 fi
