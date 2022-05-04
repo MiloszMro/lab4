@@ -30,9 +30,11 @@ then
 fi
 if [ "$1" == '--help' ] || [ "$1" == '-h' ]
 then
-	echo "--date -d      wyświetla aktualną date"
-	echo "--logs -l     dodaje 100 plików log"
+	echo "--date -d       wyświetla aktualną date"
+	echo "--logs -l       dodaje 100 plików log"
 	echo "--logs x -l x   dodaje x plików log"
+	echo "--init          clonuje repozytorium"
+	echo "--error x -e x  tworzy x katalogów z pikami error"
 fi
 if [ "$1" == '--init' ]
 then
