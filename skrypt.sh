@@ -30,7 +30,7 @@ then
 fi
 if [ "$1" == '--help' ] || [ "$1" == '-h' ]
 then
-	echo "--date      wyświetla aktualną date"
-	echo "--logs      dodaje 100 plików log"
-	echo "--logs x    dodaje x plików log"
+	echo "--date -d      wyświetla aktualną date"
+	echo "--logs -l     dodaje 100 plików log"
+	echo "--logs x -l x   dodaje x plików log"
 fi
