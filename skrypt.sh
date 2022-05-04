@@ -1,11 +1,11 @@
 #!/bin/bash
 args=("$@")
-if [ "$1" == '--date' ]
+if [ "$1" == '--date' ] || [ "$1" == '-d' ]
 then
 	date
 fi
 
-if [ "$1" == '--logs' ]
+if [ "$1" == '--logs' ] || [ "$1" == '-l' ]
 then
 	if [ -n "$2" ]
 	then
@@ -28,7 +28,7 @@ then
 			done
 	fi
 fi
-if [ "$1" == '--help' ]
+if [ "$1" == '--help' ] || [ "$1" == '-h' ]
 then
 	echo "--date      wyświetla aktualną date"
 	echo "--logs      dodaje 100 plików log"
